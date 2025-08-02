@@ -148,9 +148,28 @@ export default function BlogPage() {
                 <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
                 <p className="text-gray-600">
                   {post.preview}{' '}
-                  <a href="#" className="text-[#6c4a3f] underline hover:opacity-80">
-                    Read more
-                  </a>
+                  <a
+  href={
+      post.id === 1
+      ? '/blog-posts/tips-for-hair'
+      : post.id === 2
+      ? '/blog-posts/spf-importance'
+      : post.id === 3
+      ? '/blog-posts/masks-at-home'
+      : post.id === 4
+      ? '/blog-posts/scrubs-guide'
+      : post.id === 5
+      ? '/blog-posts/masks-at-home'
+      : post.id === 6
+      ? '/blog-posts/tips-for-hair'
+      : post.id === 10
+      ? '/blog-posts/spf-importance'
+      : '#'
+  }
+  className="text-[#6c4a3f] underline hover:opacity-80"
+>
+  Read more
+</a>
                 </p>
               </div>
             </article>

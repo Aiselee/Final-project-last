@@ -9,7 +9,9 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold whitespace-nowrap">PrimPosh</h1>
+        <Link href="/">
+          <h1 className="text-xl font-bold whitespace-nowrap cursor-pointer">PrimPosh</h1>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-gray-600 font-medium">
