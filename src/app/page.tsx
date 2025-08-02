@@ -8,7 +8,6 @@ import TestimonialsSection from '../../components/TestimonialsSection'
 import BlogSection from '../../components/BlogSection'
 import PartnersSection from '../../components/PartnersSection'
 import InstagramSection from '../../components/InstagramSection'
-import Footer from '../../components/Footer'
 
 export default function Home() {
   return (
@@ -23,8 +22,6 @@ export default function Home() {
       <BlogSection />
       <PartnersSection />
       <InstagramSection />
-      <Footer />
-
     </main>
   )
 }

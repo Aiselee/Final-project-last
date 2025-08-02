@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import { Heart, BarChart2, ShoppingCart, User, Menu, X } from 'lucide-react'
 
 export default function Header() {
@@ -12,11 +13,11 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-gray-600 font-medium">
-          <a href="#" className="hover:text-black">Home</a>
-          <a href="#" className="hover:text-black">Shop</a>
-          <a href="#" className="hover:text-black">Blog</a>
-          <a href="#" className="hover:text-black">About us</a>
-          <a href="#" className="hover:text-black">Contacts</a>
+          <Link href="/" className="hover:text-black">Home</Link>
+          <Link href="/shop" className="hover:text-black">Shop</Link>
+          <Link href="/blog" className="hover:text-black">Blog</Link>
+          <Link href="/about" className="hover:text-black">About us</Link>
+          <Link href="/contacts" className="hover:text-black">Contacts</Link>
         </nav>
 
         {/* Icons */}
@@ -44,11 +45,11 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white px-4 py-4 border-t">
           <nav className="flex flex-col gap-4 text-gray-600 font-medium">
-            <a href="#" className="hover:text-black">Home</a>
-            <a href="#" className="hover:text-black">Shop</a>
-            <a href="#" className="hover:text-black">Blog</a>
-            <a href="#" className="hover:text-black">About us</a>
-            <a href="#" className="hover:text-black">Contacts</a>
+            <Link href="/" className="hover:text-black">Home</Link>
+            <Link href="/shop" className="hover:text-black">Shop</Link>
+            <Link href="/blog" className="hover:text-black">Blog</Link>
+            <Link href="/about" className="hover:text-black">About us</Link>
+            <Link href="/contacts" className="hover:text-black">Contacts</Link>
           </nav>
         </div>
       )}

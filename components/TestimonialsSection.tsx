@@ -24,17 +24,34 @@ const testimonials = [
     stars: 5,
     text: '“ Tincidunt vitae semper quis lectus nulla. Urna et pharetra pharetra massa massa ultricies mi. Dolor sed viverra ipsum nunc aliquet bibendum. “',
   },
+  {
+    name: 'Mrs. Clara',
+    role: 'Beauty Coach',
+    image: '/pics/testimonial4.png',
+    stars: 5,
+    text: '“ Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Quam elementum pulvinar etiam. “',
+  },
+  {
+    name: 'Mrs. Helen',
+    role: 'Cosmetic Expert',
+    image: '/pics/testimonial5.png',
+    stars: 3,
+    text: '“ Tempor orci dapibus ultrices in iaculis nunc sed augue. Tellus elementum sagittis vitae et leo. “',
+  },
 ]
 
 export default function TestimonialsSection() {
   const [start, setStart] = useState(0)
+  const visibleCount = 3
 
   const showPrev = () => {
-    if (start > 0) setStart(start - 1)
+    const newStart = start - 1
+    setStart(newStart < 0 ? testimonials.length - visibleCount : newStart)
   }
 
   const showNext = () => {
-    if (start + 3 < testimonials.length) setStart(start + 1)
+    const newStart = start + 1
+    setStart(newStart > testimonials.length - visibleCount ? 0 : newStart)
   }
 
   return (
@@ -52,12 +69,15 @@ export default function TestimonialsSection() {
         </div>
 
         <div className="flex items-center gap-4 mt-8">
-          <button onClick={showPrev} className="bg-[#542420] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#3d1a15]">
+          <button
+            onClick={showPrev}
+            className="bg-[#542420] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#3d1a15]"
+          >
             <ChevronLeft size={20} />
           </button>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
-            {testimonials.slice(start, start + 3).map((t, i) => (
+            {testimonials.slice(start, start + visibleCount).map((t, i) => (
               <div key={i} className="bg-white rounded-md shadow p-6 flex flex-col justify-between min-h-[280px]">
                 <p className="text-[#542420] text-sm mb-6 leading-relaxed">{t.text}</p>
                 <div className="flex items-center gap-4">
@@ -76,7 +96,10 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          <button onClick={showNext} className="bg-[#542420] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#3d1a15]">
+          <button
+            onClick={showNext}
+            className="bg-[#542420] text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-[#3d1a15]"
+          >
             <ChevronRight size={20} />
           </button>
         </div>
