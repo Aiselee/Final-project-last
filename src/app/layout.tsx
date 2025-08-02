@@ -2,7 +2,7 @@ import './globals.css'
 import Header from '../../components/Header'
 
 export const metadata = {
-  title: 'Temporary Project',
+  title: 'Final Project',
   description: 'A clean base for demo UI',
 }
 

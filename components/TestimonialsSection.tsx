@@ -7,49 +7,22 @@ const testimonials = [
     name: 'Mrs. Adhars',
     role: 'Aesthetician',
     image: '/pics/testimonial1.png',
-    stars: 4.5,
-    text:
-      '“ Lobortis feugiat vivamus at augue eget arcu. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Praesent. “',
+    stars: 4,
+    text: '“ Lobortis feugiat vivamus at augue eget arcu. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Praesent. “',
   },
   {
     name: 'Mrs. Nishriya',
     role: 'Skin Therapist',
     image: '/pics/testimonial2.png',
     stars: 4,
-    text:
-      '“ Velit scelerisque in dictum non consectetur a erat nam at. Fermentum iaculis eu non diam phasellus. Mollis aliquam ut porttitor leo. “',
+    text: '“ Velit scelerisque in dictum non consectetur a erat nam at. Fermentum iaculis eu non diam phasellus. Mollis aliquam ut porttitor leo. “',
   },
   {
     name: 'Mrs. Jenifer',
     role: 'Skin Specialist',
     image: '/pics/testimonial3.png',
     stars: 5,
-    text:
-      '“ Tincidunt vitae semper quis lectus nulla. Urna et pharetra pharetra massa massa ultricies mi. Dolor sed viverra ipsum nunc aliquet bibendum. “',
-  },
-  {
-    name: 'Mrs. Aline',
-    role: 'Cosmetologist',
-    image: '/pics/testimonial4.png',
-    stars: 5,
-    text:
-      '“ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. “',
-  },
-  {
-    name: 'Mrs. Talia',
-    role: 'Beauty Expert',
-    image: '/pics/testimonial5.png',
-    stars: 4.5,
-    text:
-      '“ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan. Nulla aliquet enim tortor at auctor. “',
-  },
-  {
-    name: 'Mrs. Rachel',
-    role: 'Makeup Artist',
-    image: '/pics/testimonial6.png',
-    stars: 4,
-    text:
-      '“ Pellentesque elit eget gravida cum sociis natoque. Odio tempor orci dapibus ultrices. Purus gravida quis blandit turpis. “',
+    text: '“ Tincidunt vitae semper quis lectus nulla. Urna et pharetra pharetra massa massa ultricies mi. Dolor sed viverra ipsum nunc aliquet bibendum. “',
   },
 ]
 
@@ -67,9 +40,9 @@ export default function TestimonialsSection() {
   return (
     <section className="bg-[#fcefe9] py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-10 text-left max-w-xl">
+        <div className="mb-10 text-center max-w-3xl mx-auto">
           <p className="uppercase text-xs tracking-widest text-gray-500">Testimonials</p>
-          <h2 className="text-4xl font-semibold text-[#542420] mt-2">
+          <h2 className="text-5xl font-semibold text-[#542420] mt-2 leading-tight">
             Happy <span className="italic text-gray-500">Customers</span><br />
             Thoughts
           </h2>
@@ -94,7 +67,7 @@ export default function TestimonialsSection() {
                     <p className="text-sm text-gray-500">{t.role}</p>
                     <div className="flex mt-1">
                       {Array.from({ length: 5 }, (_, j) => (
-                        <Star key={j} size={16} fill={j < Math.floor(t.stars) ? '#facc15' : 'none'} color="#facc15" />
+                        <Star key={j} size={16} fill={j < t.stars ? '#facc15' : 'none'} color="#facc15" />
                       ))}
                     </div>
                   </div>
