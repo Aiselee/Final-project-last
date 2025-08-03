@@ -16,7 +16,7 @@ export default function Hero() {
           <h2 className="text-white text-2xl font-bold">Use Our Cosmetics</h2>
           <p className="text-white mt-2 text-sm">Best For Your Natural Skin Look</p>
           <a
-            href="/shop"
+            href="/products"
             className="mt-4 bg-white text-black px-4 py-2 rounded hover:bg-gray-200 transition"
           >
             Shop Now

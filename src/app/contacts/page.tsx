@@ -42,7 +42,7 @@ export default function ContactsPage() {
               <div className="flex items-center space-x-2">
                 <input type="checkbox" id="save-info" />
                 <label htmlFor="save-info" className="text-sm text-gray-600">
-                  Save my name, email, and website in this browser.
+                  Save my name and email in this website for future
                 </label>
               </div>
               <button

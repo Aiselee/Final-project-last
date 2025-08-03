@@ -28,9 +28,9 @@ export default function RecentProductsSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <button className="inline-block border px-6 py-2 text-sm rounded hover:bg-black hover:text-white transition">
-            View All
-          </button>
+          <a href="/products" className="inline-block border px-6 py-2 text-sm rounded hover:bg-black hover:text-white transition">
+  View All
+</a>
         </div>
       </div>
     </section>

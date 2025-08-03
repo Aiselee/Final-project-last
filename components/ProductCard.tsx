@@ -5,9 +5,10 @@ type Product = {
   title: string
   price: string
   image: string
+  onAddToCart?: () => void // 👈 новый необязательный проп
 }
 
-export default function ProductCard({ title, price, image }: Product) {
+export default function ProductCard({ title, price, image, onAddToCart }: Product) {
   return (
     <div className="group relative border rounded overflow-hidden bg-white shadow hover:shadow-lg transition">
       <img
@@ -23,7 +24,12 @@ export default function ProductCard({ title, price, image }: Product) {
 
       {/* Hover Add to Cart Button */}
       <div className="absolute bottom-16 left-0 w-full px-4 z-10 opacity-0 group-hover:opacity-100 transition duration-300">
-        <button className="w-full bg-black/50 text-white py-2 text-sm rounded-md shadow-md backdrop-blur-sm flex items-center justify-center gap-2">
+        <button
+          className="w-full bg-black/50 text-white py-2 text-sm rounded-md shadow-md backdrop-blur-sm flex items-center justify-center gap-2"
+          onClick={() => {
+            onAddToCart?.()
+          }} // 👈 добавлен хендлер
+        >
           <ShoppingCart className="w-4 h-4" />
           Add to Cart
         </button>

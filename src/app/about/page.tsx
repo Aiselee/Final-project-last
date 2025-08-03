@@ -1,5 +1,6 @@
 import { Users, Package, Leaf, Globe, Clock, ThumbsUp } from 'lucide-react';
 import PartnersSection from '../../../components/PartnersSection';
+import Link from 'next/link'
 
 export default function AboutPage() {
   return (
@@ -92,9 +93,12 @@ export default function AboutPage() {
       <p className="text-gray-600 mb-6 leading-7">
         Explore our exclusive line of clean and healthy beauty products designed to nourish your skin from within.
       </p>
-      <button className="bg-[#6c4a3f] text-white py-3 px-6 rounded text-sm uppercase tracking-wide">
-        Explore Now
-      </button>
+      <Link
+  href="/products"
+  className="bg-[#6c4a3f] text-white py-3 px-6 rounded text-sm uppercase tracking-wide">
+  Explore Now
+</Link>
+
     </div>
   </div>
 </section>

@@ -42,7 +42,7 @@ export default function BlogSection() {
                     <p className="text-sm text-gray-400">{blog.author}</p>
                     <h3 className="font-semibold text-gray-800 leading-snug">{blog.title}</h3>
                     <p className="text-sm text-[#733c2b]">{blog.excerpt}</p>
-                    <a href="#" className="inline-block border border-gray-800 px-4 py-2 text-xs tracking-widest hover:bg-black hover:text-white transition w-max mt-2">
+                    <a href="/blog-posts/masks-at-home" className="inline-block border border-gray-800 px-4 py-2 text-xs tracking-widest hover:bg-black hover:text-white transition w-max mt-2">
                       READ MORE
                     </a>
                   </div>
@@ -68,7 +68,7 @@ export default function BlogSection() {
                     <p className="text-sm text-gray-400">{blog.author}</p>
                     <h3 className="font-semibold text-gray-800 leading-snug">{blog.title}</h3>
                     <p className="text-sm text-[#733c2b]">{blog.excerpt}</p>
-                    <a href="#" className="inline-block border border-gray-800 px-4 py-2 text-xs tracking-widest hover:bg-black hover:text-white transition w-max mt-2">
+                    <a href="/blog-posts/tips-for-hair" className="inline-block border border-gray-800 px-4 py-2 text-xs tracking-widest hover:bg-black hover:text-white transition w-max mt-2">
                       READ MORE
                     </a>
                   </div>

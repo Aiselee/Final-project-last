@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { useCart } from '../../app/context/card-context';
+import ProductCard from '../../../components/ProductCard';
 
 interface Product {
   id: number;
@@ -10,6 +12,7 @@ interface Product {
 }
 
 export default function ProductsPage() {
+  const { dispatch } = useCart();
   const uniqueProducts: Product[] = [
     { id: 1, name: 'Organic Face Cream', image: '/pics/productpage1.png', price: 35.0 },
     { id: 2, name: 'Natural Hair Oil', image: '/pics/productpage2.png', price: 25.8 },
@@ -105,20 +108,23 @@ export default function ProductsPage() {
       <section className="py-16">
         <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {paginatedProducts.map((product) => (
-            <div
+            <ProductCard
               key={product.id}
-              className="border p-4 rounded shadow-sm text-center"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-48 object-cover mb-4 rounded"
-              />
-              <h3 className="text-lg font-medium text-gray-800">{product.name}</h3>
-              <p className="text-[#6c4a3f] font-bold mt-2">
-                ${product.price.toFixed(2)}
-              </p>
-            </div>
+              title={product.name}
+              price={`$${product.price.toFixed(2)}`}
+              image={product.image}
+              onAddToCart={() =>
+                dispatch({
+                  type: 'ADD_ITEM',
+                  payload: {
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                  },
+                })
+              }
+            />
           ))}
         </div>
       </section>
