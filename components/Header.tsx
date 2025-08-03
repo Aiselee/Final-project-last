@@ -16,7 +16,7 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-gray-600 font-medium">
           <Link href="/" className="hover:text-black">Home</Link>
-          <Link href="/shop" className="hover:text-black">Shop</Link>
+          <Link href="/products" className="hover:text-black">Products</Link>
           <Link href="/blog" className="hover:text-black">Blog</Link>
           <Link href="/about" className="hover:text-black">About us</Link>
           <Link href="/contacts" className="hover:text-black">Contacts</Link>
@@ -48,7 +48,7 @@ export default function Header() {
         <div className="md:hidden bg-white px-4 py-4 border-t">
           <nav className="flex flex-col gap-4 text-gray-600 font-medium">
             <Link href="/" className="hover:text-black">Home</Link>
-            <Link href="/shop" className="hover:text-black">Shop</Link>
+            <Link href="/products" className="hover:text-black">Products</Link>
             <Link href="/blog" className="hover:text-black">Blog</Link>
             <Link href="/about" className="hover:text-black">About us</Link>
             <Link href="/contacts" className="hover:text-black">Contacts</Link>
