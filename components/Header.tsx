@@ -1,13 +1,13 @@
 'use client'
 import { useState } from 'react'
-import { useCart } from '../src/app/context/card-context'
 import Link from 'next/link'
 import { Heart, BarChart2, ShoppingCart, User, Menu, X } from 'lucide-react'
+import { useCart } from '../src/app/context/card-context'
 
 export default function Header() {
-  const { state } = useCart();
-  const cartCount = state.items.length;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { state } = useCart()
+  const cartCount = state.items.length
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -30,8 +30,12 @@ export default function Header() {
           <Heart className="w-5 h-5 hover:text-black cursor-pointer" />
           <BarChart2 className="w-5 h-5 hover:text-black cursor-pointer" />
           <div className="relative">
-            <ShoppingCart className="w-5 h-5 hover:text-black cursor-pointer" />
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-1.5 text-xs">{cartCount}</span>
+            <Link href="/checkout">
+              <ShoppingCart className="w-5 h-5 hover:text-black cursor-pointer" />
+            </Link>
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-1.5 text-xs">
+              {cartCount}
+            </span>
           </div>
           <User className="w-5 h-5 hover:text-black cursor-pointer hidden md:inline" />
 

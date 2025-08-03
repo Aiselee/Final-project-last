@@ -1,5 +1,4 @@
 'use client'
-
 import { createContext, useContext, useReducer, ReactNode } from 'react'
 
 type CartItem = {
@@ -15,6 +14,7 @@ type Action =
   | { type: 'REMOVE_ITEM'; index: number }
   | { type: 'INCREASE_QUANTITY'; index: number }
   | { type: 'DECREASE_QUANTITY'; index: number }
+  | { type: 'CLEAR_CART' }
 
 type CartState = {
   items: CartItem[]
@@ -52,6 +52,11 @@ function cartReducer(state: CartState, action: Action): CartState {
             ? { ...item, quantity: item.quantity - 1 }
             : item
         ),
+      }
+    case 'CLEAR_CART':
+      return {
+        ...state,
+        items: [],
       }
     default:
       return state

@@ -42,8 +42,8 @@ export default function ProductsPage() {
 
   const productsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
-  const [minPrice, setMinPrice] = useState(15);
-  const [maxPrice, setMaxPrice] = useState(95);
+  const [minPrice, setMinPrice] = useState<number | ''>(15);
+  const [maxPrice, setMaxPrice] = useState<number | ''>(95);
 
   const filteredProducts = allProducts.filter(
     (p) => p.price >= minPrice && p.price <= maxPrice
@@ -80,7 +80,10 @@ export default function ProductsPage() {
             min={15}
             max={95}
             value={minPrice}
-            onChange={(e) => setMinPrice(Number(e.target.value))}
+            onChange={(e) => {
+              const value = e.target.value;
+              setMinPrice(value === '' ? '' : Number(value));
+            }}
             className="w-24 border border-gray-300 rounded pl-5 pr-2 py-1 text-sm"
           />
         </div>
@@ -95,11 +98,26 @@ export default function ProductsPage() {
             min={15}
             max={85}
             value={maxPrice}
-            onChange={(e) => setMaxPrice(Number(e.target.value))}
+            onChange={(e) => {
+              const value = e.target.value;
+              setMaxPrice(value === '' ? '' : Number(value));
+            }}
             className="w-24 border border-gray-300 rounded pl-5 pr-2 py-1 text-sm"
           />
         </div>
       </label>
+    
+      <button
+  onClick={() => {
+    setMinPrice(15);
+    setMaxPrice(95);
+  }}
+  className="h-[34px] border text-sm px-4 rounded text-gray-600 hover:bg-gray-100"
+>
+  Reset filter
+</button>
+
+
     </div>
   </div>
 </section>

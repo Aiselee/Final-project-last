@@ -1,4 +1,5 @@
 'use client'
+import { useCart } from '../src/app/context/card-context'
 import ProductCard from './ProductCard'
 
 const recentProducts = [
@@ -13,6 +14,7 @@ const recentProducts = [
 ]
 
 export default function RecentProductsSection() {
+  const { dispatch } = useCart();
   return (
     <section className="bg-[#fefefe] py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -23,14 +25,29 @@ export default function RecentProductsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {recentProducts.map((product, index) => (
-            <ProductCard key={index} {...product} />
+            <ProductCard
+              key={index}
+              {...product}
+              onAddToCart={() => {
+                dispatch({
+                  type: 'ADD_ITEM',
+                  payload: {
+                    id: index + 2000,
+                    name: product.title,
+                    price: parseFloat(product.price.replace('$', '')),
+                    image: product.image,
+                  },
+                })
+                window.dispatchEvent(new CustomEvent('open-cart'))
+              }}
+            />
           ))}
         </div>
 
         <div className="mt-10 text-center">
           <a href="/products" className="inline-block border px-6 py-2 text-sm rounded hover:bg-black hover:text-white transition">
-  View All
-</a>
+            View All
+          </a>
         </div>
       </div>
     </section>

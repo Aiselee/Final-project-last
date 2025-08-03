@@ -1,7 +1,8 @@
 'use client'
+import Link from 'next/link'
 import { useCart } from '../src/app/context/card-context'
 import { X, Plus, Minus, Trash2 } from 'lucide-react'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useMemo } from 'react'
 
 export default function CartSidebar({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const { state, dispatch } = useCart()
@@ -20,6 +21,10 @@ export default function CartSidebar({ isOpen, onClose }: { isOpen: boolean; onCl
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [isOpen, onClose])
+
+  const totalPrice = useMemo(() => {
+    return state.items.reduce((sum, item) => sum + item.price * item.quantity, 0)
+  }, [state.items])
 
   return (
     <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
@@ -71,6 +76,20 @@ export default function CartSidebar({ isOpen, onClose }: { isOpen: boolean; onCl
             ))
           )}
         </div>
+
+        {state.items.length > 0 && (
+          <div className="p-4 border-t">
+            <div className="flex justify-between mb-4">
+              <span className="text-sm text-gray-600">Total:</span>
+              <span className="text-lg font-semibold">${totalPrice.toFixed(2)}</span>
+            </div>
+            <Link href="/checkout" onClick={onClose}>
+              <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-800">
+                Proceed to Checkout
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   )

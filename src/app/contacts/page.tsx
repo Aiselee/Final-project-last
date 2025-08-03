@@ -19,8 +19,9 @@ export default function ContactsPage() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">Send Us Message</h2>
               <p className="text-gray-600 mb-6">
-                Nulla tincidunt convallis bibendum. Duis sed risus cipit justo integer neque felis,
-                egestas a euismod in pulvinar.
+                Have a question or suggestion? Send us a message — we’re happy to help.<br/>
+                Our team responds quickly and with care.<br/>
+                Just fill out the form below and we’ll get back to you as soon as possible.
               </p>
             </div>
             <form className="space-y-4 mt-auto">
