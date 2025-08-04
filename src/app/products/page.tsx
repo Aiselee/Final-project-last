@@ -58,6 +58,7 @@ export default function ProductsPage() {
 
   return (
     <main>
+
       {/* Hero Section */}
       <section className="w-full bg-[#f4e7db] py-20 flex items-center justify-center text-center">
         <div>
@@ -122,7 +123,7 @@ export default function ProductsPage() {
   </div>
 </section>
 
-      {/* Product Grid */}
+      {/* Product Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {paginatedProducts.map((product) => (

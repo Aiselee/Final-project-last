@@ -27,7 +27,6 @@ export default function CategoryBannerSection() {
   return (
     <section className="px-4 py-12 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Верхний ряд */}
         <div className="md:col-span-2 flex flex-col gap-4">
           <CategoryCard {...banners[0]} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -120,6 +120,7 @@ export default function BlogPage() {
 
   return (
     <main>
+
       {/* Hero Section */}
       <section className="w-full bg-[#f4e7db] py-20 flex items-center justify-center text-center">
         <div>
@@ -133,7 +134,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 grid gap-16">
           {paginatedPosts.map((post) => (
             <article key={post.id} className="flex flex-col lg:flex-row gap-6">
-              {/* Image */}
+
               <div className="lg:w-1/2">
                 <img
                   src={post.image}
@@ -142,7 +143,6 @@ export default function BlogPage() {
                 />
               </div>
 
-              {/* Text */}
               <div className="lg:w-1/2 flex flex-col justify-center">
                 <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                 <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
@@ -180,7 +180,6 @@ export default function BlogPage() {
       {/* Pagination */}
       <section className="pb-20">
         <div className="flex justify-center items-center space-x-2">
-          {/* Prev arrow */}
           <button
             aria-label="Previous page"
             disabled={currentPage === 1}
@@ -204,7 +203,6 @@ export default function BlogPage() {
             </button>
           ))}
 
-          {/* Next arrow */}
           <button
             aria-label="Next page"
             disabled={currentPage === totalPages}

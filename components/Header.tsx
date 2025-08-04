@@ -16,7 +16,7 @@ export default function Header() {
           <h1 className="text-xl font-bold whitespace-nowrap cursor-pointer">PrimPosh</h1>
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop */}
         <nav className="hidden md:flex space-x-6 text-gray-600 font-medium">
           <Link href="/" className="hover:text-black">Home</Link>
           <Link href="/products" className="hover:text-black">Products</Link>
@@ -50,7 +50,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white px-4 py-4 border-t">
           <nav className="flex flex-col gap-4 text-gray-600 font-medium">

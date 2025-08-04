@@ -5,6 +5,7 @@ import Link from 'next/link'
 export default function AboutPage() {
   return (
     <main>
+
       {/* Hero Section */}
       <section className="w-full bg-[#f4e7db] py-20 flex items-center justify-center text-center">
         <div>
@@ -13,26 +14,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Image Composition + Text Section */}
+      {/* Image + Text Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-10 items-stretch">
-          {/* Image Composition */}
           <div className="w-full lg:w-1/2 relative h-[400px] overflow-hidden">
-            {/* Top Left */}
             <img
               src="/pics/abouthero1.webp"
               alt="About 1"
               className="absolute top-0 left-0 w-1/2 h-auto max-w-[260px] z-10"
             />
 
-            {/* Top Right */}
             <img
               src="/pics/abouthero2.webp"
               alt="About 2"
               className="absolute top-0 right-0 w-1/2 h-auto max-w-[260px] z-20"
             />
 
-            {/* Bottom Centered */}
             <img
               src="/pics/abouthero3.webp"
               alt="About 3"
@@ -40,7 +37,7 @@ export default function AboutPage() {
             />
           </div>
 
-          {/* Text block */}
+          {/* Text */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
             <p className="uppercase text-sm text-gray-500 mb-2 tracking-widest">About us</p>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -59,7 +56,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Block */}
+      {/* Mission Section */}
       <section className="py-20 bg-white text-center">
         <div className="container mx-auto px-4 max-w-4xl">
 <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed mb-10">
@@ -77,7 +74,7 @@ export default function AboutPage() {
 
       <section className="py-20">
   <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
-    {/* Image */}
+
     <div className="w-full lg:w-1/2">
       <img
         src="/pics/aboutbanner.webp"
@@ -86,7 +83,6 @@ export default function AboutPage() {
       />
     </div>
 
-    {/* Text */}
     <div className="w-full lg:w-1/2 text-center lg:text-left">
       <p className="text-sm uppercase text-gray-500 tracking-wide mb-2">Get up to 50% off</p>
       <h2 className="text-3xl font-bold text-gray-800 mb-4">Great Deals on Organic Skincare</h2>
@@ -105,42 +101,37 @@ export default function AboutPage() {
 
 <section className="py-20 bg-gray-50">
   <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-center">
-    {/* 1 */}
+
     <div className="flex flex-col items-center">
       <Users className="w-8 h-8 mb-2 text-[#6c4a3f]" />
       <h3 className="text-2xl font-bold text-gray-800">50K</h3>
       <p className="text-gray-600">Satisfied Customers</p>
     </div>
 
-    {/* 2 */}
     <div className="flex flex-col items-center">
       <Package className="w-8 h-8 mb-2 text-[#6c4a3f]" />
       <h3 className="text-2xl font-bold text-gray-800">65+</h3>
       <p className="text-gray-600">Cosmetics Creams</p>
     </div>
 
-    {/* 3 */}
     <div className="flex flex-col items-center">
       <Leaf className="w-8 h-8 mb-2 text-[#6c4a3f]" />
       <h3 className="text-2xl font-bold text-gray-800">35</h3>
       <p className="text-gray-600">Organic Products</p>
     </div>
 
-    {/* 4 */}
     <div className="flex flex-col items-center">
       <Globe className="w-8 h-8 mb-2 text-[#6c4a3f]" />
       <h3 className="text-2xl font-bold text-gray-800">150K</h3>
       <p className="text-gray-600">Global Stores</p>
     </div>
 
-    {/* 5 */}
     <div className="flex flex-col items-center">
       <Clock className="w-8 h-8 mb-2 text-[#6c4a3f]" />
       <h3 className="text-2xl font-bold text-gray-800">15</h3>
       <p className="text-gray-600">Years of Experience</p>
     </div>
 
-    {/* 6 */}
     <div className="flex flex-col items-center">
       <ThumbsUp className="w-8 h-8 mb-2 text-[#6c4a3f]" />
       <h3 className="text-2xl font-bold text-gray-800">98%</h3>

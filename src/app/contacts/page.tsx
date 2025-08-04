@@ -3,6 +3,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 export default function ContactsPage() {
   return (
     <main>
+
       {/* Hero Section */}
       <section className="w-full bg-[#f4e7db] py-20 flex items-center justify-center text-center">
         <div>
@@ -14,7 +15,7 @@ export default function ContactsPage() {
       {/* Contact Form + Image Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-10 items-stretch">
-          {/* Form */}
+
           <div className="w-full lg:w-1/2 flex flex-col justify-between">
             <div>
               <h2 className="text-2xl font-semibold mb-4">Send Us Message</h2>
@@ -55,7 +56,6 @@ export default function ContactsPage() {
             </form>
           </div>
 
-          {/* Image */}
           <div className="w-full lg:w-1/2">
             <img
               src="/pics/contacts.webp"
@@ -69,7 +69,7 @@ export default function ContactsPage() {
       {/* Map Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {/* Map */}
+
           <div className="w-full h-[400px] mb-10">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.177418364514!2d76.99538317597602!3d11.013325192173133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8583e065daacb%3A0x47e7de3ec9be059c!2sWeDesignTech!5e0!3m2!1sen!2s!4v1688473834846!5m2!1sen!2s"
@@ -82,7 +82,7 @@ export default function ContactsPage() {
             />
           </div>
 
-          {/* Contact Info */}
+          {/* Company Contacts Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
               <MapPin className="w-6 h-6 text-[#6c4a3f] mb-2" />

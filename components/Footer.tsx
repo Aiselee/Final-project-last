@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#fcefe9] px-4 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8 text-sm text-gray-800">
-        {/* Subscribe block */}
+
         <div className="md:col-span-2 flex flex-col gap-4">
           <h1 className="text-2xl font-bold text-[#542420]">
             <span className="text-[#733c2b]">PRIM</span>POSH
@@ -48,7 +48,6 @@ export default function Footer() {
           {submitted && <p className="text-green-600 text-sm mt-1">Thank you for subscribing!</p>}
         </div>
 
-        {/* Column 1 */}
         <div className="flex flex-col gap-3">
           <h3 className="font-semibold mb-1">Categories</h3>
           <a href="#" className="hover:underline">Face Care</a>
@@ -57,7 +56,6 @@ export default function Footer() {
           <a href="#" className="hover:underline">Sun Protection</a>
         </div>
 
-        {/* Column 2 */}
         <div className="flex flex-col gap-3">
           <h3 className="font-semibold mb-1">Information</h3>
           <a href="#" className="hover:underline">About Us</a>
@@ -66,7 +64,6 @@ export default function Footer() {
           <a href="#" className="hover:underline">Privacy Policy</a>
         </div>
 
-        {/* Column 3 */}
         <div className="flex flex-col gap-3">
           <h3 className="font-semibold mb-1">Help</h3>
           <a href="#" className="hover:underline">FAQ</a>
@@ -75,7 +72,6 @@ export default function Footer() {
           <a href="#" className="hover:underline">Support</a>
         </div>
 
-        {/* Column 4 */}
         <div className="flex flex-col gap-3">
           <h3 className="font-semibold mb-1">Follow Us</h3>
           <a href="#" className="hover:underline">Instagram</a>

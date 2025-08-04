@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="w-full bg-white">
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {/* Левая карточка */}
+
         <div className="relative min-h-[500px] overflow-hidden group rounded">
           <img
             src="/pics/hero-woman.png"
@@ -11,7 +11,6 @@ export default function Hero() {
           />
           </div>
 
-        {/* Средняя карточка */}
         <div className="flex flex-col justify-center items-center text-center bg-[#c79f85] min-h-[500px] rounded p-6">
           <h2 className="text-white text-2xl font-bold">Use Our Cosmetics</h2>
           <p className="text-white mt-2 text-sm">Best For Your Natural Skin Look</p>
@@ -23,7 +22,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Правая карточка */}
         <div className="relative min-h-[500px] overflow-hidden group rounded">
           <img
             src="/pics/hero-serum.png"
